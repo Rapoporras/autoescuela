@@ -29,7 +29,7 @@ function App() {
         minHeight="100vh"
         color="#002327"
         p="15px"
-        // position="relative"
+      // position="relative"
       >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
@@ -103,24 +103,21 @@ function App() {
           />
         </SimpleGrid>
       </Center>
-      <Center w="100%" bg="#00BAB5" p="5px 5px 5px 0xpx" height="auto" color="#002327">
+      <Center w="100%" bg="#00BAB5" p="5px 5px 5px 0xpx" height="524px" color="#002327">
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
-          <Box>
-            <Text>Hola</Text>
+          <Box height="524px" >
+
+            Hola
+
           </Box>
-          <Box
-            w="100%"
-            as="video"
-            controls
-            borderRadiusBottomLeft="3em"
-            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-            alt="Big Buck Bunny"
-            objectFit="contain"
-            sx={{
-              aspectRatio: "16/9",
-            }}
-          />
+
+          <video
+            controls muted autoPlay loop>
+            <source src=
+              "https://media.geeksforgeeks.org/wp-content/uploads/20200409094356/Placement100-_-GeeksforGeeks2.mp4"
+              type="video/mp4" />
+          </video>
+
         </SimpleGrid>
       </Center>
       <Center
