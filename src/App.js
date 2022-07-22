@@ -64,7 +64,7 @@ function App() {
         minHeight="100vh"
         height="auto"
         color="#002327"
-      >
+      > 
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
             <Box maxW={"500px"}>
