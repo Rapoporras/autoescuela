@@ -12,11 +12,12 @@ import {
   VStack,
   IconButton,
   CloseButton,
+  Image,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 // import { Logo } from "@choc-ui/logo";
 
-export default function Header(){
+export default function Header(props) {
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
 
@@ -29,6 +30,7 @@ export default function Header(){
         py={4}
         shadow="md"
         position={"fixed"}
+        zIndex="99999999"
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
@@ -38,12 +40,12 @@ export default function Header(){
               display="flex"
               alignItems="center"
             >
-              {/* <Logo /> */}
-              <VisuallyHidden>Choc</VisuallyHidden>
+              <Image
+                height="40px"
+                src="https://firebasestorage.googleapis.com/v0/b/autoescuelaclickanddrive.appspot.com/o/Click%20%26%20Drive_Logo.png?alt=media&token=698c89b0-4bfc-4de1-a835-8b33cab11147"
+              />
+              <VisuallyHidden>Autoescuela Click&drive</VisuallyHidden>
             </chakra.a>
-            <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              Choc
-            </chakra.h1>
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
@@ -52,15 +54,18 @@ export default function Header(){
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Button variant="ghost">Features</Button>
-              <Button variant="ghost">Pricing</Button>
-              <Button variant="ghost">Blog</Button>
-              <Button variant="ghost">Company</Button>
-              <Button variant="ghost">Sign in</Button>
+              <Button
+                variant="ghost"
+                onClick={() => props.scrollTo("#item-20")}
+              >
+                Inicio
+              </Button>
+              <Button variant="ghost">Sobre Nosotros</Button>
+              <Button variant="ghost">Servicios</Button>
+              <Button variant="ghost">Precios</Button>
+              <Button backgroundColor="#00BAB5" color="#fff">Matriculate</Button>
             </HStack>
-            <Button colorScheme="brand" size="sm">
-              Get Started
-            </Button>
+
             <Box display={{ base: "inline-flex", md: "none" }}>
               <IconButton
                 display={{ base: "flex", md: "none" }}
@@ -93,21 +98,26 @@ export default function Header(){
                   onClick={mobileNav.onClose}
                 />
 
-                <Button w="full" variant="ghost">
-                  Features
+                <Button
+                  w="full"
+                  variant="ghost"
+                  onClick={() => props.scrollTo("#item-20")}
+                >
+                  Inicio
                 </Button>
                 <Button w="full" variant="ghost">
-                  Pricing
+                  Sobre Nosotros
                 </Button>
                 <Button w="full" variant="ghost">
-                  Blog
+                  Servicios
                 </Button>
                 <Button w="full" variant="ghost">
-                  Company
+                  Precios
                 </Button>
-                <Button w="full" variant="ghost">
-                  Sign in
+                <Button w="full" backgroundColor="#00BAB5" color="#fff">
+                  Matriculate
                 </Button>
+               
               </VStack>
             </Box>
           </HStack>
@@ -115,4 +125,4 @@ export default function Header(){
       </chakra.header>
     </React.Fragment>
   );
-};
+}

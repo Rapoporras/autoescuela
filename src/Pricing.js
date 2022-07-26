@@ -2,7 +2,7 @@ import React from "react";
 import { chakra, Box, Flex, Icon, HStack, VStack } from "@chakra-ui/react";
 import { IoCheckmark } from "react-icons/io5";
 
-export default function Pricing(){
+export default function Pricing() {
   const Feature = (props) => {
     return (
       <Flex alignSelf="start" w="full">
@@ -15,19 +15,13 @@ export default function Pricing(){
           fill="currentColor"
           as={IoCheckmark}
         />
-        <chakra.p
-          fontSize="lg"
-          color="white"
-         
-          {...props}
-        />
+        <chakra.p fontSize="lg" color="#002327" {...props} />
       </Flex>
     );
   };
   return (
     <Flex
-      bg="#edf3f8"
-      _dark={{ bg: "#3e3e3e" }}
+      bg="#E9F0F6"
       p={10}
       w="full"
       justifyContent="center"
@@ -45,8 +39,7 @@ export default function Pricing(){
             rounded="lg"
             borderTopRightRadius={0}
             borderBottomLeftRadius="lg"
-            bg="white"
-            _dark={{ bg: "gray.700" }}
+            bg="#002327"
             my={6}
             direction="column"
           >
@@ -57,10 +50,10 @@ export default function Pricing(){
               textAlign="center"
               w="full"
               shadow="xl"
+              color="white"
             >
-                
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Hobby
+                Matricula
               </chakra.span>
               <HStack spacing={3}>
                 <chakra.span
@@ -70,21 +63,13 @@ export default function Pricing(){
                 >
                   $79
                 </chakra.span>
-                <chakra.span
-                  alignSelf="center"
-                  fontSize="3xl"
-                  _light={{ color: "gray.400" }}
-                >
-                  /month
-                </chakra.span>
               </HStack>
             </VStack>
             <VStack
               fontSize="sm"
               spacing={8}
               h="full"
-              bg="#00BAB5"
-            
+              bg="#fff"
               borderBottomLeftRadius="lg"
               p={12}
             >
@@ -115,9 +100,8 @@ export default function Pricing(){
                   border="solid transparent"
                   fontWeight="bold"
                   rounded="md"
-                  color="brand.600"
-                  _dark={{ color: "gray.100" }}
-                  bg="white"
+                  color="#fff"
+                  bg="#002327"
                   _hover={{
                     bg: "brand.50",
                     _dark: { bg: "gray.700" },
@@ -150,9 +134,9 @@ export default function Pricing(){
               shadow="xl"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Growth
+                Matricula + Pack Clases
               </chakra.span>
-              <HStack spacing={3}>
+              <VStack spacing={3}>
                 <chakra.span
                   fontWeight="bold"
                   fontSize="6xl"
@@ -160,14 +144,10 @@ export default function Pricing(){
                 >
                   $149
                 </chakra.span>
-                <chakra.span
-                  alignSelf="center"
-                  fontSize="3xl"
-                  _light={{ color: "gray.400" }}
-                >
-                  /month
+                <chakra.span alignSelf="center" fontSize="3xl" color="#002327">
+                  (Mejor Opción)
                 </chakra.span>
-              </HStack>
+              </VStack>
             </VStack>
             <VStack
               fontSize="sm"
@@ -202,13 +182,14 @@ export default function Pricing(){
                   fontWeight="bold"
                   rounded="md"
                   _light={{ color: "white" }}
-                  bg="brand.600"
+                  bg="#00BAB5"
                   _dark={{ bg: "brand.500" }}
                   _hover={{
                     bg: "brand.700",
                     _dark: { bg: "brand.600" },
                   }}
                   cursor="pointer"
+                  href="https://buy.stripe.com/test_00g6qZ8PBe7B6go000"
                 >
                   Get started
                 </chakra.a>
@@ -222,7 +203,7 @@ export default function Pricing(){
             roundedTop="lg"
             borderBottomRightRadius="lg"
             borderTopLeftRadius={0}
-            bg="white"
+            bg="#002327"
             _dark={{ bg: "gray.700" }}
             my={6}
             direction="column"
@@ -234,9 +215,10 @@ export default function Pricing(){
               textAlign="center"
               w="full"
               shadow="xl"
+              color="white"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Scale
+                Clases Practicas
               </chakra.span>
               <HStack spacing={3}>
                 <chakra.span
@@ -244,14 +226,7 @@ export default function Pricing(){
                   fontSize="6xl"
                   textShadow="2px 0 currentcolor"
                 >
-                  $349
-                </chakra.span>
-                <chakra.span
-                  alignSelf="center"
-                  fontSize="3xl"
-                  _light={{ color: "gray.400" }}
-                >
-                  /month
+                  $10
                 </chakra.span>
               </HStack>
             </VStack>
@@ -259,7 +234,7 @@ export default function Pricing(){
               fontSize="sm"
               spacing={8}
               h="full"
-              bg="#00BAB5"
+              bg="#fff"
               _dark={{ bg: "gray.800" }}
               borderBottomRightRadius="lg"
               p={12}
@@ -291,14 +266,14 @@ export default function Pricing(){
                   border="solid transparent"
                   fontWeight="bold"
                   rounded="md"
-                  color="brand.600"
-                  _dark={{ color: "gray.100" }}
-                  bg="white"
+                  color="#fff"
+                  bg="#002327"
                   _hover={{
                     bg: "brand.50",
                     _dark: { bg: "gray.700" },
                   }}
                   cursor="pointer"
+                  href="https://buy.stripe.com/test_00g5mV0j5gfJfQY8wx"
                 >
                   Start your trial
                 </chakra.a>
@@ -309,4 +284,4 @@ export default function Pricing(){
       </Box>
     </Flex>
   );
-};
+}
