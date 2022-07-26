@@ -45,16 +45,16 @@ function App() {
         color="#002327"
         p="15px"
         id="#Inicio"
-        // position="relative"
+      // position="relative"
       >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
             <Box maxW={"500px"}>
               <Heading as="h2" size="2xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Autoescula click & drive
               </Heading>
               <Text fontSize="xl" mt="15px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                En tu móvil
               </Text>
               <Button mt="15px" backgroundColor="#00BAB5" color="#fff">
                 Matriculate Ahora
@@ -67,7 +67,7 @@ function App() {
             objectFit="cover"
             shadow={"sm"}
             borderRadius="1em"
-            src="https://firebasestorage.googleapis.com/v0/b/autoescuelaclickanddrive.appspot.com/o/driving-instructor-showing-vehicle-dashboard-and-buttons-to-the-student-taking-driving-lessons.jpg?alt=media&token=d50d1a7e-9ce7-473b-a629-84bb8e73cfc8"
+            src="https://firebasestorage.googleapis.com/v0/b/autoescuelaclickanddrive.appspot.com/o/1.jpg?alt=media&token=30373a44-59e7-4ebb-a0dd-c3f256ccdddb"
             alt="Dan Abramov"
           />
         </SimpleGrid>
@@ -80,33 +80,33 @@ function App() {
         minHeight="100vh"
         height="auto"
         color="#002327"
-      > 
+      >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
             <Box maxW={"500px"}>
               <Heading as="h2" size="2xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sacarse el carnet de coche nunca fue tan barato y sencillo
               </Heading>
               <Text fontSize="xl" mt="15px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Si estás pensando en sacarte el carnet de conducir B nosotros te lo ponemos fácil
               </Text>
               <List spacing={15} mt="15px">
                 <ListItem>
-                  <ListIcon as={AiFillCar} color="green.500" />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  <ListIcon as={AiFillCar} color="#00BAB5" />
+                  Completamente digital
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={AiFillCar} color="green.500" />
-                  Assumenda, quia temporibus eveniet a libero incidunt suscipit
+                  <ListIcon as={AiFillCar} color="#00BAB5" />
+                  A cualquier hora y sitio .
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={AiFillCar} color="green.500" />
-                  Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                  <ListIcon as={AiFillCar} color="#00BAB5" />
+                  Fácil y eficaz .
                 </ListItem>
                 {/* You can also use custom icons from react-icons */}
                 <ListItem>
-                  <ListIcon as={AiFillCar} color="green.500" />
-                  Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                  <ListIcon as={AiFillCar} color="#00BAB5" />
+                  Aprueba el teórico y queda con tu profesora
                 </ListItem>
               </List>
             </Box>
@@ -114,13 +114,13 @@ function App() {
 
           <Image
             objectFit="cover"
-            src="https://firebasestorage.googleapis.com/v0/b/autoescuelaclickanddrive.appspot.com/o/Group%201.png?alt=media&token=35084f70-5926-41cd-94bf-1307b7ec78f8"
+            src="https://firebasestorage.googleapis.com/v0/b/autoescuelaclickanddrive.appspot.com/o/Sin-t%C3%ADtulo-1.png?alt=media&token=f4e758aa-496d-4e9d-952b-02ac3f06f5c5"
             alt="Dan Abramov"
           />
         </SimpleGrid>
       </Center>
       <Center w="100%" my="150x" height="400px" id="fondo">
-        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+        <h1>Clases Practicas a tu manera y a cualquier hora</h1>
       </Center>
       <Center
         w="100%"
@@ -137,10 +137,10 @@ function App() {
           style={{ alignSelf: "center" }}
         >
           <Heading as="h2" size="2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            El carnet en la palma de tu mano
           </Heading>
           <Text fontSize="xl" mt="15px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Estudia a tu ritmo, nosotros nos adaptamos
           </Text>
           <Features></Features>
         </SimpleGrid>
