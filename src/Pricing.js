@@ -1,6 +1,6 @@
 import React from "react";
-import { chakra, Box, Flex, Icon, HStack, VStack } from "@chakra-ui/react";
-import { IoCheckmark,IoWarning } from "react-icons/io5";
+import { chakra, Box, Flex, Icon, HStack, VStack, Button } from "@chakra-ui/react";
+import { IoCheckmark, IoWarning } from "react-icons/io5";
 
 export default function Pricing() {
   const Feature = (props) => {
@@ -43,7 +43,7 @@ export default function Pricing() {
       justifyContent="center"
       alignItems="center"
     >
-      <Box w="full" pt={8}>
+      <Box w="full" pt={8} textAlign="center">
         <Flex
           direction={{ base: "column", md: "row" }}
           justifyContent="center"
@@ -150,7 +150,7 @@ export default function Pricing() {
               shadow="xl"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Matricula + Bono 10 Clases Practicas
+                Matricula + Bono 10 Clases Prácticas
               </chakra.span>
               <VStack spacing={3}>
                 <chakra.span
@@ -181,9 +181,9 @@ export default function Pricing() {
                 alignItems="start"
               >
                 <Feature>+2500 preguntas Oficiales DGT</Feature>
-               
+
                 <Feature>Recomendaciones personalizadas</Feature>
-                <Feature>Clases Practicas de 45 min</Feature>
+                <Feature>Clases Prácticas de 45 min</Feature>
                 <Feature>Prácticas en zona de examen</Feature>
                 <Feature>Contacto directo con tu profesor/a</Feature>
                 <FeatureBad>No incluye Tasas DGT ni examen Practico</FeatureBad>
@@ -236,7 +236,7 @@ export default function Pricing() {
               color="white"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Matricula + Bono 20 Clases Practicas
+                Matricula + Bono 20 Clases Prácticas
               </chakra.span>
               <HStack spacing={3}>
                 <chakra.span
@@ -265,7 +265,7 @@ export default function Pricing() {
               >
                 <Feature>+2500 preguntas Oficiales DGT</Feature>
                 <Feature>Recomendaciones personalizadas</Feature>
-                <Feature>Clases Practicas de 45 min</Feature>
+                <Feature>Clases Prácticas de 45 min</Feature>
                 <Feature>Prácticas en zona de examen</Feature>
                 <Feature>Contacto directo con tu profesor/a</Feature>
                 <FeatureBad>No incluye Tasas DGT ni examen Practico</FeatureBad>
@@ -302,6 +302,58 @@ export default function Pricing() {
             </VStack>
           </Flex>
         </Flex>
+        <Button
+          mt="15px"
+          backgroundColor="#002327"
+          color="#fff"
+
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+        >
+          Pagar Examen + Tasas DGT
+        </Button>
+        <Button
+          mt="15px"
+          mx="15px"
+          backgroundColor="#002327"
+          color="#fff"
+
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+        >
+         Bono 10 Clases Prácticas
+        </Button>
+        <Button
+          mt="15px"
+          backgroundColor="#002327"
+          color="#fff"
+
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+        >
+         Bono 20 Clases Prácticas
+        </Button>
       </Box>
     </Flex>
   );

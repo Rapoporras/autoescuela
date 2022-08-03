@@ -18,6 +18,8 @@ import {
   Text,
   VStack,
   chakra,
+  LinkBox,
+  LinkOverlay,
 } from "@chakra-ui/react";
 import { AiFillCar } from "react-icons/ai";
 import Features from "./Feature";
@@ -42,16 +44,16 @@ function App() {
         color="#002327"
         p="15px"
         id="inicio"
-        // position="relative"
+      // position="relative"
       >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
             <Box maxW={"500px"}>
               <Heading as="h2" size="2xl">
-                 La primera Autoescuela completamente Online en Marbella
+                Tu Autoescula online en Marbella
               </Heading>
               <Text fontSize="xl" mt="15px">
-               Tu carnet a unos pocos clicks
+                Aún no tienes tu carnet ?
               </Text>
               <Button
                 mt="15px"
@@ -84,7 +86,7 @@ function App() {
         </SimpleGrid>
         {/* <div className="wave"></div> */}
       </Center>
-      <Center
+      {/* <Center
         w="100%"
         bg="#fff"
         p="15px"
@@ -116,7 +118,7 @@ function App() {
                   <ListIcon as={AiFillCar} color="#00BAB5" />
                   Fácil y eficaz .
                 </ListItem>
-                {/* You can also use custom icons from react-icons */}
+              
                 <ListItem>
                   <ListIcon as={AiFillCar} color="#00BAB5" />
                   Aprueba el teórico y queda con tu profesora
@@ -131,9 +133,9 @@ function App() {
             alt="Dan Abramov"
           />
         </SimpleGrid>
-      </Center>
+      </Center> */}
       <Center w="100%" my="150x" height="400px" id="fondo">
-        <h1>Clases Practicas a tu manera y a cualquier hora</h1>
+        <h1>Completamente digital</h1>
       </Center>
       <Center
         w="100%"
@@ -151,10 +153,10 @@ function App() {
           style={{ alignSelf: "center" }}
         >
           <Heading as="h2" size="2xl">
-            El carnet en un click
+            Tu carnet a un click
           </Heading>
           <Text fontSize="xl" mt="15px">
-            Estudia a tu ritmo, nosotros nos adaptamos
+            Gestiona tu tiempo, del resto nos encargamos nosotros
           </Text>
           <Features></Features>
         </SimpleGrid>
@@ -169,6 +171,18 @@ function App() {
         color="#002327"
       >
         <Pricing></Pricing>
+
+      </Center>
+      <Center
+
+        w="100%"
+        bg="#E9F0F6"
+        p="15px"
+    
+        color="#002327"
+      >
+      
+
       </Center>
       <Flex
         w="full"

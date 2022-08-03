@@ -1,5 +1,5 @@
 import React from "react";
-import { chakra, Box, SimpleGrid, Flex, Icon } from "@chakra-ui/react";
+import { chakra, Box, SimpleGrid, Flex, Icon, UnorderedList, ListItem } from "@chakra-ui/react";
 
 import { FaIdCardAlt, FaMoneyBillAlt } from "react-icons/fa";
 import { GoDeviceMobile } from "react-icons/go";
@@ -53,30 +53,54 @@ export default function Features() {
 
       >
         <Feature
-          title="Tu carnet de conducir Super Express"
+          title="¿Por qué elegir Click&Drive?"
           icon={
             <GoDeviceMobile size={"40px"}></GoDeviceMobile>
           }
         >
-          Estudiar desde tu móvil permite un proceso más rápido y sencillo. Desde cualquier parte y en cualquier momento, sin la necesidad de estudiar y pasar horas delante de un libro.
+          <UnorderedList>
+            <ListItem>Gestiona y controla tu carnet a través de la app</ListItem>
+            <ListItem> 100% personalizada</ListItem>
+            <ListItem> Todo sin salir de casa y a cualquiera hora</ListItem>
+
+          </UnorderedList>
+
+
         </Feature>
 
         <Feature
-          title="Aumenta tus probabilidades de aprobar a la primera"
+          title="Información del teórico y práctica"
           icon={
             <FaIdCardAlt size={"40px"}></FaIdCardAlt>
           }
         >
-          Con la aplicación para smartphone Dribo, dispondrás de feedback personalizado en cada test de conducir sobre tus errores y sobre los temas para los cuales necesitas más refuerzo.
+          <UnorderedList>
+            <ListItem>  + 2500 preguntas Oficiales DGT</ListItem>
+            <ListItem> Recomendaciones personalizadas</ListItem>
+            <ListItem> Todo sin salir de casa y a cualquiera hora</ListItem>
+
+
+            <ListItem>   Clases a tu medida</ListItem>
+            <ListItem>  Recorridos de examen   </ListItem>
+
+          </UnorderedList>
         </Feature>
 
         <Feature
-          title="Sacarse el carnet de conducir a tu manera"
+          title="Inscribirme en Click & Drive "
           icon={
             <FaMoneyBillAlt size={"40px"}></FaMoneyBillAlt>
           }
-        >
-          Invierte menos dinero y prueba nuestro método eficaz online. Nuestra metodología funciona y nuestra principal preocupación es que aprendas de forma entretenida.
+        > <UnorderedList>
+            <ListItem>   Matricúlate </ListItem>
+            <ListItem>   Te invitamos a la app ( Firma el contrato )   </ListItem>
+            <ListItem>  Aprueba el teórico</ListItem>
+            <ListItem>    Empieza con la prácticas </ListItem>
+
+          </UnorderedList>
+
+
+
         </Feature>
       </SimpleGrid>
     </Flex>
