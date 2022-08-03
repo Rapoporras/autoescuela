@@ -1,6 +1,6 @@
 import React from "react";
 import { chakra, Box, Flex, Icon, HStack, VStack } from "@chakra-ui/react";
-import { IoCheckmark } from "react-icons/io5";
+import { IoCheckmark,IoWarning } from "react-icons/io5";
 
 export default function Pricing() {
   const Feature = (props) => {
@@ -14,6 +14,22 @@ export default function Pricing() {
           viewBox="0 0 20 20"
           fill="currentColor"
           as={IoCheckmark}
+        />
+        <chakra.p fontSize="lg" color="#002327" {...props} />
+      </Flex>
+    );
+  };
+  const FeatureBad = (props) => {
+    return (
+      <Flex alignSelf="start" w="full">
+        <Icon
+          boxSize={5}
+          mt={1}
+          mr={2}
+          _light={{ color: "yellow.500" }}
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          as={IoWarning}
         />
         <chakra.p fontSize="lg" color="#002327" {...props} />
       </Flex>
@@ -61,7 +77,7 @@ export default function Pricing() {
                   fontSize="6xl"
                   textShadow="2px 0 currentcolor"
                 >
-                  $79
+                  50€
                 </chakra.span>
               </HStack>
             </VStack>
@@ -79,9 +95,9 @@ export default function Pricing() {
                 direction="column"
                 alignItems="start"
               >
-                <Feature>Suppression Management</Feature>
-                <Feature>Email Tracking and Analytics </Feature>
-                <Feature>99.99% Guaranteed Uptime SLA</Feature>
+                <Feature>+2500 preguntas Oficiales DGT</Feature>
+                <Feature>Recomendaciones personalizadas</Feature>
+                <Feature>Soporte de profesores</Feature>
               </VStack>
               <Box
                 w="full"
@@ -107,13 +123,13 @@ export default function Pricing() {
                     _dark: { bg: "gray.700" },
                   }}
                   cursor="pointer"
+                  href="https://buy.stripe.com/8wMfZe7fJfZn49yfZ1"
                 >
-                  Start your trial{" "}
+                  Comienza ahora
                 </chakra.a>
               </Box>
             </VStack>
           </Flex>
-
           <Flex
             flex={{ base: 1, lg: "initial" }}
             w={{ lg: 2.4 / 7 }}
@@ -134,7 +150,7 @@ export default function Pricing() {
               shadow="xl"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Matricula + Pack Clases
+                Matricula + Bono 10 Clases Practicas
               </chakra.span>
               <VStack spacing={3}>
                 <chakra.span
@@ -142,10 +158,10 @@ export default function Pricing() {
                   fontSize="6xl"
                   textShadow="2px 0 currentcolor"
                 >
-                  $149
+                  340€
                 </chakra.span>
                 <chakra.span alignSelf="center" fontSize="3xl" color="#002327">
-                  (Mejor Opción)
+                  (Recomendado)
                 </chakra.span>
               </VStack>
             </VStack>
@@ -164,11 +180,13 @@ export default function Pricing() {
                 direction="column"
                 alignItems="start"
               >
-                <Feature>Suppression Management</Feature>
-                <Feature>Email Tracking and Analytics </Feature>
-                <Feature>99.99% Guaranteed Uptime SLA</Feature>
-                <Feature>1,000 Email Address Validations</Feature>
-                <Feature>Limited 24/7 Ticket Support</Feature>
+                <Feature>+2500 preguntas Oficiales DGT</Feature>
+               
+                <Feature>Recomendaciones personalizadas</Feature>
+                <Feature>Clases Practicas de 45 min</Feature>
+                <Feature>Prácticas en zona de examen</Feature>
+                <Feature>Contacto directo con tu profesor/a</Feature>
+                <FeatureBad>No incluye Tasas DGT ni examen Practico</FeatureBad>
               </VStack>
               <Box display="inline-flex" rounded="md" shadow="md" w="full">
                 <chakra.a
@@ -189,9 +207,9 @@ export default function Pricing() {
                     _dark: { bg: "brand.600" },
                   }}
                   cursor="pointer"
-                  href="https://buy.stripe.com/test_00g6qZ8PBe7B6go000"
+                  href="https://buy.stripe.com/4gwaEUcA35kJ9tSaEK"
                 >
-                  Get started
+                  Comienza ahora
                 </chakra.a>
               </Box>
             </VStack>
@@ -218,7 +236,7 @@ export default function Pricing() {
               color="white"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Clases Practicas
+                Matricula + Bono 20 Clases Practicas
               </chakra.span>
               <HStack spacing={3}>
                 <chakra.span
@@ -226,7 +244,7 @@ export default function Pricing() {
                   fontSize="6xl"
                   textShadow="2px 0 currentcolor"
                 >
-                  $10
+                  620€
                 </chakra.span>
               </HStack>
             </VStack>
@@ -245,9 +263,12 @@ export default function Pricing() {
                 direction="column"
                 alignItems="start"
               >
-                <Feature>Suppression Management</Feature>
-                <Feature>Email Tracking and Analytics </Feature>
-                <Feature>99.99% Guaranteed Uptime SLA</Feature>
+                <Feature>+2500 preguntas Oficiales DGT</Feature>
+                <Feature>Recomendaciones personalizadas</Feature>
+                <Feature>Clases Practicas de 45 min</Feature>
+                <Feature>Prácticas en zona de examen</Feature>
+                <Feature>Contacto directo con tu profesor/a</Feature>
+                <FeatureBad>No incluye Tasas DGT ni examen Practico</FeatureBad>
               </VStack>
               <Box
                 w="full"
@@ -273,9 +294,9 @@ export default function Pricing() {
                     _dark: { bg: "gray.700" },
                   }}
                   cursor="pointer"
-                  href="https://buy.stripe.com/test_00g5mV0j5gfJfQY8wx"
+                  href="https://buy.stripe.com/bIYcN243x6oN9tSdQU"
                 >
-                  Start your trial
+                  Comienza ahora
                 </chakra.a>
               </Box>
             </VStack>

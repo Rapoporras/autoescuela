@@ -24,19 +24,16 @@ import Features from "./Feature";
 import React, { useRef } from "react";
 import Pricing from "./Pricing";
 import "animate.css";
-import useSmoothScroll from "react-smooth-scroll-hook";
 function App() {
   // A custom scroll container
-  const ref = useRef(null);
+  const scrollTo = (id) => {
+    var idbuscado = document.getElementById(id);
 
-  const { scrollTo } = useSmoothScroll({
-    ref,
-    speed: 100,
-    direction: "y",
-  });
+    idbuscado.scrollIntoView();
+  };
 
   return (
-    <div className="App" ref={ref}>
+    <div className="App">
       <Header scrollTo={scrollTo}></Header>
       <Center
         w="100%"
@@ -44,19 +41,33 @@ function App() {
         minHeight="100vh"
         color="#002327"
         p="15px"
-        id="#Inicio"
-      // position="relative"
+        id="inicio"
+        // position="relative"
       >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
             <Box maxW={"500px"}>
               <Heading as="h2" size="2xl">
-                Autoescula click & drive
+                 La primera Autoescuela completamente Online en Marbella
               </Heading>
               <Text fontSize="xl" mt="15px">
-                En tu móvil
+               Tu carnet a unos pocos clicks
               </Text>
-              <Button mt="15px" backgroundColor="#00BAB5" color="#fff">
+              <Button
+                mt="15px"
+                backgroundColor="#00BAB5"
+                color="#fff"
+                onClick={() => scrollTo("matriculate")}
+                _hover={{
+                  bg: "#fff",
+                  border: "1px solid #00BAB5",
+                  color: "#00BAB5",
+                }}
+                _focus={{
+                  boxShadow:
+                    "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                }}
+              >
                 Matriculate Ahora
               </Button>
             </Box>
@@ -80,15 +91,17 @@ function App() {
         minHeight="100vh"
         height="auto"
         color="#002327"
+        id="sobre_nosotros"
       >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
             <Box maxW={"500px"}>
               <Heading as="h2" size="2xl">
-                Sacarse el carnet de coche nunca fue tan barato y sencillo
+                Sacarse el carnet nunca fue tan sencillo
               </Heading>
               <Text fontSize="xl" mt="15px">
-                Si estás pensando en sacarte el carnet de conducir B nosotros te lo ponemos fácil
+                Si estás pensando en sacarte el carnet de conducir B nosotros te
+                lo ponemos fácil
               </Text>
               <List spacing={15} mt="15px">
                 <ListItem>
@@ -96,8 +109,8 @@ function App() {
                   Completamente digital
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={AiFillCar} color="#00BAB5" />
-                  A cualquier hora y sitio .
+                  <ListIcon as={AiFillCar} color="#00BAB5" />A cualquier hora y
+                  sitio .
                 </ListItem>
                 <ListItem>
                   <ListIcon as={AiFillCar} color="#00BAB5" />
@@ -114,7 +127,7 @@ function App() {
 
           <Image
             objectFit="cover"
-            src="https://firebasestorage.googleapis.com/v0/b/autoescuelaclickanddrive.appspot.com/o/Sin-t%C3%ADtulo-1.png?alt=media&token=f4e758aa-496d-4e9d-952b-02ac3f06f5c5"
+            src="https://firebasestorage.googleapis.com/v0/b/autoescuelaclickanddrive.appspot.com/o/Sin-t%C3%ADtulo-12.png?alt=media&token=90924b8b-77b7-4a29-a4ff-d91c2c4ff288"
             alt="Dan Abramov"
           />
         </SimpleGrid>
@@ -130,6 +143,7 @@ function App() {
         color="#002327"
         mt="15px"
         textAlign="center"
+        id="servicios"
       >
         <SimpleGrid
           columns={[1, null, 1]}
@@ -137,7 +151,7 @@ function App() {
           style={{ alignSelf: "center" }}
         >
           <Heading as="h2" size="2xl">
-            El carnet en la palma de tu mano
+            El carnet en un click
           </Heading>
           <Text fontSize="xl" mt="15px">
             Estudia a tu ritmo, nosotros nos adaptamos
@@ -146,7 +160,8 @@ function App() {
         </SimpleGrid>
       </Center>
       <Center
-        id="item-20"
+        id="matriculate"
+        key="matriculate"
         w="100%"
         bg="#E9F0F6"
         p="15px"

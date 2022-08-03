@@ -56,14 +56,65 @@ export default function Header(props) {
             >
               <Button
                 variant="ghost"
-                onClick={() => props.scrollTo("#item-20")}
+                onClick={() => props.scrollTo("inicio")}
+                _hover={{
+                  bg: "#fff",
+                  border: "1px solid #00BAB5",
+                  color: "#00BAB5",
+                }}
+                _focus={{
+                  boxShadow:
+                    "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                }}
               >
                 Inicio
               </Button>
-              <Button variant="ghost">Sobre Nosotros</Button>
-              <Button variant="ghost">Servicios</Button>
-              <Button variant="ghost">Precios</Button>
-              <Button backgroundColor="#00BAB5" color="#fff">Matriculate</Button>
+              <Button
+                variant="ghost"
+                onClick={() => props.scrollTo("sobre_nosotros")}
+                _hover={{
+                  bg: "#fff",
+                  border: "1px solid #00BAB5",
+                  color: "#00BAB5",
+                }}
+                _focus={{
+                  boxShadow:
+                    "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                }}
+              >
+                Sobre Nosotros
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => props.scrollTo("servicios")}
+                _hover={{
+                  bg: "#fff",
+                  border: "1px solid #00BAB5",
+                  color: "#00BAB5",
+                }}
+                _focus={{
+                  boxShadow:
+                    "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                }}
+              >
+                Servicios
+              </Button>
+              <Button
+                backgroundColor="#00BAB5"
+                color="#fff"
+                onClick={() => props.scrollTo("matriculate")}
+                _hover={{
+                  bg: "#fff",
+                  border: "1px solid #00BAB5",
+                  color: "#00BAB5",
+                }}
+                _focus={{
+                  boxShadow:
+                    "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                }}
+              >
+                Matriculate
+              </Button>
             </HStack>
 
             <Box display={{ base: "inline-flex", md: "none" }}>
@@ -101,23 +152,68 @@ export default function Header(props) {
                 <Button
                   w="full"
                   variant="ghost"
-                  onClick={() => props.scrollTo("#item-20")}
+                  onClick={() => props.scrollTo("inicio")}
+                  _hover={{
+                    bg: "#fff",
+                    border: "1px solid #00BAB5",
+                    color: "#00BAB5",
+                  }}
+                  _focus={{
+                    boxShadow:
+                      "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                  }}
                 >
                   Inicio
                 </Button>
-                <Button w="full" variant="ghost">
+                <Button
+                  w="full"
+                  variant="ghost"
+                  onClick={() => props.scrollTo("sobre_nosotros")}
+                  _hover={{
+                    bg: "#fff",
+                    border: "1px solid #00BAB5",
+                    color: "#00BAB5",
+                  }}
+                  _focus={{
+                    boxShadow:
+                      "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                  }}
+                >
                   Sobre Nosotros
                 </Button>
-                <Button w="full" variant="ghost">
+                <Button
+                  w="full"
+                  variant="ghost"
+                  onClick={() => props.scrollTo("servicios")}
+                  _hover={{
+                    bg: "#fff",
+                    border: "1px solid #00BAB5",
+                    color: "#00BAB5",
+                  }}
+                  _focus={{
+                    boxShadow:
+                      "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                  }}
+                >
                   Servicios
                 </Button>
-                <Button w="full" variant="ghost">
-                  Precios
-                </Button>
-                <Button w="full" backgroundColor="#00BAB5" color="#fff">
+                <Button
+                  w="full"
+                  backgroundColor="#00BAB5"
+                  color="#fff"
+                  onClick={() => props.scrollTo("matriculate")}
+                  _hover={{
+                    bg: "#fff",
+                    border: "1px solid #00BAB5",
+                    color: "#00BAB5",
+                  }}
+                  _focus={{
+                    boxShadow:
+                      "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                  }}
+                >
                   Matriculate
                 </Button>
-               
               </VStack>
             </Box>
           </HStack>
