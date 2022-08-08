@@ -30,7 +30,7 @@ export default function Header(props) {
         py={4}
         shadow="md"
         position={"fixed"}
-        zIndex="99999999"
+        zIndex="99"
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
@@ -69,7 +69,7 @@ export default function Header(props) {
               >
                 Inicio
               </Button>
-              <Button
+              {/* <Button
                 variant="ghost"
                 onClick={() => props.scrollTo("sobre_nosotros")}
                 _hover={{
@@ -83,7 +83,7 @@ export default function Header(props) {
                 }}
               >
                 Sobre Nosotros
-              </Button>
+              </Button> */}
               <Button
                 variant="ghost"
                 onClick={() => props.scrollTo("servicios")}
@@ -97,7 +97,7 @@ export default function Header(props) {
                     "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
                 }}
               >
-                Servicios
+                Información
               </Button>
               <Button
                 backgroundColor="#00BAB5"

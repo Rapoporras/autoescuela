@@ -1,6 +1,30 @@
-import React from "react";
-import { chakra, Box, Flex, Icon, HStack, VStack, Button } from "@chakra-ui/react";
+import React, { useState } from "react";
+import {
+  chakra,
+  Box,
+  Flex,
+  Icon,
+  HStack,
+  VStack,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  FormControl,
+  FormLabel,
+  Input,
+  FormHelperText,
+  FormErrorMessage,
+  Text,
+} from "@chakra-ui/react";
 import { IoCheckmark, IoWarning } from "react-icons/io5";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "./firebase";
 
 export default function Pricing() {
   const Feature = (props) => {
@@ -35,6 +59,36 @@ export default function Pricing() {
       </Flex>
     );
   };
+  const [inputNombre, setInputNombre] = useState("");
+  const [inputTelefono, setInputTelefono] = useState("");
+  const [linkstipe, setLinkstipe] = useState("");
+  const [isError, setError] = useState(false);
+  const handleinputNombreChange = (e) => setInputNombre(e.target.value);
+
+  const handleinputTelefonoChange = (e) => setInputTelefono(e.target.value);
+
+  const guardar_datos = () => {
+    if (inputTelefono != "" && inputNombre != "") {
+      setError(false);
+      try {
+        const docRef = addDoc(collection(db, "users"), {
+          nombre: inputNombre,
+          telefono: inputTelefono,
+        });
+
+        console.log("Document written with ID: ", docRef.id);
+        window.open(linkstipe, "_blank");
+        setInputNombre("");
+        setInputTelefono("");
+        onClose();
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    } else {
+      setError(true);
+    }
+  };
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex
       bg="#E9F0F6"
@@ -123,7 +177,10 @@ export default function Pricing() {
                     _dark: { bg: "gray.700" },
                   }}
                   cursor="pointer"
-                  href="https://buy.stripe.com/8wMfZe7fJfZn49yfZ1"
+                  onClick={() => {
+                    setLinkstipe("https://buy.stripe.com/8wMfZe7fJfZn49yfZ1");
+                    onOpen();
+                  }}
                 >
                   Comienza ahora
                 </chakra.a>
@@ -207,7 +264,10 @@ export default function Pricing() {
                     _dark: { bg: "brand.600" },
                   }}
                   cursor="pointer"
-                  href="https://buy.stripe.com/4gwaEUcA35kJ9tSaEK"
+                  onClick={() => {
+                    setLinkstipe("https://buy.stripe.com/4gwaEUcA35kJ9tSaEK");
+                    onOpen();
+                  }}
                 >
                   Comienza ahora
                 </chakra.a>
@@ -294,7 +354,10 @@ export default function Pricing() {
                     _dark: { bg: "gray.700" },
                   }}
                   cursor="pointer"
-                  href="https://buy.stripe.com/bIYcN243x6oN9tSdQU"
+                  onClick={() => {
+                    setLinkstipe("https://buy.stripe.com/bIYcN243x6oN9tSdQU");
+                    onOpen();
+                  }}
                 >
                   Comienza ahora
                 </chakra.a>
@@ -306,7 +369,6 @@ export default function Pricing() {
           mt="15px"
           backgroundColor="#002327"
           color="#fff"
-
           _hover={{
             bg: "#fff",
             border: "1px solid #002327",
@@ -315,6 +377,51 @@ export default function Pricing() {
           _focus={{
             boxShadow:
               "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/3cs8wM1VpfZndK8cMT");
+            onOpen();
+          }}
+        >
+          Pagar Tasas DGT
+        </Button>
+        <Button
+          mt="15px"
+          mx="15px"
+          backgroundColor="#002327"
+          color="#fff"
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/28obIYbvZfZndK828d");
+            onOpen();
+          }}
+        >
+          Pagar Examen
+        </Button>
+        <Button
+          mt="15px"
+          backgroundColor="#002327"
+          color="#fff"
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/dR68wMgQj7sR0Xm7su");
+            onOpen();
           }}
         >
           Pagar Examen + Tasas DGT
@@ -324,7 +431,6 @@ export default function Pricing() {
           mx="15px"
           backgroundColor="#002327"
           color="#fff"
-
           _hover={{
             bg: "#fff",
             border: "1px solid #002327",
@@ -334,14 +440,17 @@ export default function Pricing() {
             boxShadow:
               "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
           }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/00g14k1Vp3cB49ydQR");
+            onOpen();
+          }}
         >
-         Bono 10 Clases Prácticas
+          Bono 10 Clases Prácticas
         </Button>
         <Button
           mt="15px"
           backgroundColor="#002327"
           color="#fff"
-
           _hover={{
             bg: "#fff",
             border: "1px solid #002327",
@@ -351,9 +460,95 @@ export default function Pricing() {
             boxShadow:
               "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
           }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/3cs8wM1VpfZndK8cMT");
+            onOpen();
+          }}
         >
-         Bono 20 Clases Prácticas
+          Bono 20 Clases Prácticas
+        </Button>{" "}
+        <Button
+          mt="15px"
+          backgroundColor="#002327"
+          color="#fff"
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/eVacN29nR9AZ35u6ow");
+            onOpen();
+          }}
+        >
+          Comprar Clases Prácticas
         </Button>
+        <Modal
+          isOpen={isOpen}
+          onClose={() => {
+            setInputNombre("");
+            setInputTelefono("");
+            onClose();
+          }}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Introduce tus datos de contacto</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <FormControl isRequired>
+                <FormLabel>Nombre Completo</FormLabel>
+                <Input value={inputNombre} onChange={handleinputNombreChange} />
+              </FormControl>
+              <FormControl isRequired>
+                <FormLabel>Teléfono de contacto</FormLabel>
+                <Input
+                  value={inputTelefono}
+                  onChange={handleinputTelefonoChange}
+                />
+              </FormControl>
+              {!isError ? (
+                ""
+              ) : (
+                <Text fontSize="12px" color="tomato">
+                  Todos los campos son requeridos
+                </Text>
+              )}
+            </ModalBody>
+
+            <ModalFooter>
+              <Button
+                variant="ghost"
+                mr={3}
+                onClick={() => {
+                  setInputNombre("");
+                  setInputTelefono("");
+                  onClose();
+                }}
+              >
+                Cerrar
+              </Button>
+              <Button
+                backgroundColor="#002327"
+                color="#fff"
+                _hover={{
+                  bg: "#fff",
+                  border: "1px solid #002327",
+                  color: "#00BAB5",
+                }}
+                onClick={() => {
+                  guardar_datos();
+                }}
+              >
+                Continuar con el pago
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </Box>
     </Flex>
   );
