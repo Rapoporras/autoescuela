@@ -26,6 +26,7 @@ import Features from "./Feature";
 import React, { useRef } from "react";
 import Pricing from "./Pricing";
 import "animate.css";
+import Review from "./Review";
 function Home(props) {
   // A custom scroll container
 
@@ -47,7 +48,7 @@ function Home(props) {
                 Tu Autoescuela online en Marbella
               </Heading>
               <Text fontSize="xl" mt="15px">
-                ¿Aún no tienes el carnet ?
+                ¿ Aún no tienes el carnet ?
               </Text>
               <Button
                 mt="15px"
@@ -64,7 +65,7 @@ function Home(props) {
                     "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
                 }}
               >
-                Matriculate ahora
+                Matricúlate ahora
               </Button>
             </Box>
           </Center>
@@ -154,6 +155,7 @@ function Home(props) {
             Gestiona tu tiempo, del resto nos encargamos nosotros
           </Text>
           <Features></Features>
+          {/* <Review></Review> */}
         </SimpleGrid>
       </Center>
       <Center

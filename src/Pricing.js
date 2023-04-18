@@ -68,12 +68,16 @@ export default function Pricing() {
   const handleinputTelefonoChange = (e) => setInputTelefono(e.target.value);
 
   const guardar_datos = () => {
+    const tiempoTranscurrido = Date.now();
+    const hoy = new Date(tiempoTranscurrido);
+
     if (inputTelefono != "" && inputNombre != "") {
       setError(false);
       try {
-        const docRef = addDoc(collection(db, "users"), {
+        const docRef = addDoc(collection(db, "Users"), {
           nombre: inputNombre,
           telefono: inputTelefono,
+          fecha: hoy.toISOString(),
         });
 
         console.log("Document written with ID: ", docRef.id);
@@ -123,7 +127,7 @@ export default function Pricing() {
               color="white"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Matricula
+                Matrícula
               </chakra.span>
               <HStack spacing={3}>
                 <chakra.span
@@ -149,7 +153,7 @@ export default function Pricing() {
                 direction="column"
                 alignItems="start"
               >
-                <Feature>+2500 preguntas Oficiales DGT</Feature>
+                <Feature>+ 2500 preguntas Oficiales DGT</Feature>
                 <Feature>Recomendaciones personalizadas</Feature>
                 <Feature>Soporte de profesores</Feature>
               </VStack>
@@ -207,7 +211,7 @@ export default function Pricing() {
               shadow="xl"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Matricula + Bono 10 Clases Prácticas
+                Matrícula + Bono 10 Clases Prácticas
               </chakra.span>
               <VStack spacing={3}>
                 <chakra.span
@@ -237,7 +241,7 @@ export default function Pricing() {
                 direction="column"
                 alignItems="start"
               >
-                <Feature>+2500 preguntas Oficiales DGT</Feature>
+                <Feature>+ 2500 preguntas Oficiales DGT</Feature>
 
                 <Feature>Recomendaciones personalizadas</Feature>
                 <Feature>Clases Prácticas de 45 min</Feature>
@@ -296,7 +300,7 @@ export default function Pricing() {
               color="white"
             >
               <chakra.span fontSize="3xl" fontWeight="bold">
-                Matricula + Bono 20 Clases Prácticas
+                Matrícula + Bono 20 Clases Prácticas
               </chakra.span>
               <HStack spacing={3}>
                 <chakra.span
@@ -323,7 +327,7 @@ export default function Pricing() {
                 direction="column"
                 alignItems="start"
               >
-                <Feature>+2500 preguntas Oficiales DGT</Feature>
+                <Feature>+ 2500 preguntas Oficiales DGT</Feature>
                 <Feature>Recomendaciones personalizadas</Feature>
                 <Feature>Clases Prácticas de 45 min</Feature>
                 <Feature>Prácticas en zona de examen</Feature>

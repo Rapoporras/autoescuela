@@ -165,7 +165,7 @@ export default function Header(props) {
                 >
                   Inicio
                 </Button>
-                <Button
+                {/* <Button
                   w="full"
                   variant="ghost"
                   onClick={() => props.scrollTo("sobre_nosotros")}
@@ -180,7 +180,7 @@ export default function Header(props) {
                   }}
                 >
                   Sobre Nosotros
-                </Button>
+                </Button> */}
                 <Button
                   w="full"
                   variant="ghost"
@@ -212,7 +212,7 @@ export default function Header(props) {
                       "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
                   }}
                 >
-                  Matriculate
+                  Matricúlate
                 </Button>
               </VStack>
             </Box>

@@ -14,6 +14,7 @@ import {
 import { AiFillCar } from "react-icons/ai";
 import { FaIdCardAlt, FaMoneyBillAlt } from "react-icons/fa";
 import { GoDeviceMobile } from "react-icons/go";
+import Review from "./Review";
 
 export default function Features() {
   const Feature = (props) => {
@@ -56,12 +57,12 @@ export default function Features() {
       <SimpleGrid
         columns={{ base: 1, md: 2, lg: 3 }}
         spacing={5}
-        px={{ base: 4, lg: 16, xl: 24 }}
+        px={{ base: 4, lg: 15, xl: 24 }}
         mx="auto"
         bg="white"
       >
         <Feature
-          title="¿Por qué elegir Click&Drive?"
+          title="¿ Por qué elegir Click&Drive ?"
           icon={<GoDeviceMobile size={"40px"}></GoDeviceMobile>}
         > <List spacing={15} mt="15px">
         <ListItem style={{width:"100%", textAlign:"left"}}>
@@ -108,7 +109,7 @@ export default function Features() {
         </Feature>
 
         <Feature
-          title="¿Cómo me inscribo en Click&Drive "
+          title="¿ Cómo inscribirse en Click&Drive ? "
           icon={<FaMoneyBillAlt size={"40px"}></FaMoneyBillAlt>}
         >
           {" "}
@@ -132,6 +133,7 @@ export default function Features() {
           </List>
         </Feature>
       </SimpleGrid>
+     
     </Flex>
   );
 }
