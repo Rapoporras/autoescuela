@@ -20,6 +20,7 @@ import {
   chakra,
   LinkBox,
   LinkOverlay,
+  Link,
 } from "@chakra-ui/react";
 import { AiFillCar } from "react-icons/ai";
 import Features from "./Feature";
@@ -78,7 +79,6 @@ function Home(props) {
             src="https://firebasestorage.googleapis.com/v0/b/autoescuelaclickanddrive.appspot.com/o/1.jpg?alt=media&token=30373a44-59e7-4ebb-a0dd-c3f256ccdddb"
             alt="Dan Abramov"
           />
-          
         </SimpleGrid>
         {/* <div className="wave"></div> */}
       </Center>
@@ -155,8 +155,32 @@ function Home(props) {
             Gestiona tu tiempo, del resto nos encargamos nosotros
           </Text>
           <Features></Features>
-          {/* <Review></Review> */}
         </SimpleGrid>
+      </Center>
+      <Center p="15px">
+        <Heading as="h2" size="2xl">
+          (2xl) In love with React & Next
+        </Heading>
+      </Center>
+      <Center p="15px">
+        <Review></Review>
+      </Center>
+      <Center>
+        <Link
+          mt={"15px"}
+          href="https://g.page/r/CRE1zk9jDa9HEB0/review"
+          target="_blank"
+        >
+          <Center
+            height={"50px"}
+            w={"250px"}
+            color={"#fff"}
+            backgroundColor={"#00BAB5"}
+            borderRadius={"1em"}
+          >
+            Cuentanos tu experiencia
+          </Center>
+        </Link>
       </Center>
       <Center
         id="matriculate"
