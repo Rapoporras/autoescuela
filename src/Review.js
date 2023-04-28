@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import people from "./data";
-import StarRating from "react-star-rating";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 import "./Review.css";
 // Import Swiper React components
@@ -8,8 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import { Box, Center } from "@chakra-ui/react";
-import ReactStarRatingMin from "react-star-rating";
+import { Rating } from 'react-simple-star-rating'
 const Review = () => {
+
+
   return (
     <Swiper
       spaceBetween={50}
@@ -29,15 +30,10 @@ const Review = () => {
               borderRadius={"1em"}
             >
               <Box>{person.name}</Box>
-              <Box>
-                {/* <ReactStarRatingMin
-                  rating={person.star}
-                  starRatedColor="#00BAB5"
-                  // changeRating={this.changeRating}
-                  numberOfStars={5}
-                  name="rating"
-                /> */}
-              </Box>
+              <Center    >
+                <Rating allowHover={false} initialValue={person.star} />
+
+              </Center>
               <Box>{person.text}</Box>
             </Center>
           </SwiperSlide>

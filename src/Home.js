@@ -28,6 +28,7 @@ import React, { useRef } from "react";
 import Pricing from "./Pricing";
 import "animate.css";
 import Review from "./Review";
+import { Rating } from "react-simple-star-rating";
 function Home(props) {
   // A custom scroll container
 
@@ -40,7 +41,7 @@ function Home(props) {
         color="#002327"
         p="15px"
         id="inicio"
-        // position="relative"
+      // position="relative"
       >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
@@ -194,6 +195,8 @@ function Home(props) {
         <Pricing></Pricing>
       </Center>
       <Center w="100%" bg="#E9F0F6" p="15px" color="#002327"></Center>
+
+
     </>
   );
 }
