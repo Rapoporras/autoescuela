@@ -28,6 +28,7 @@ import React, { useRef } from "react";
 import Pricing from "./Pricing";
 import "animate.css";
 import Review from "./Review";
+import SwipperPhotos from "./SwipperPhotos";
 function Home(props) {
   // A custom scroll container
 
@@ -157,17 +158,26 @@ function Home(props) {
           <Features></Features>
         </SimpleGrid>
       </Center>
-      <Center p="15px">
-        <Heading as="h2" size="2xl">
-          (2xl) In love with React & Next
+      <Center p="15px" mb={"15px"}>
+        <Heading as="h2" size="2xl" style={{textAlign: "center"}}>
+          Feedback de nuestros alumnos de Autoescuela Marbella Click&Drive
         </Heading>
       </Center>
       <Center p="15px">
-        <Review></Review>
+        <SimpleGrid columns={[1, null, 2]} spacing="40px">
+          <Box>
+            {" "}
+            <Review></Review>
+          </Box>
+          <Center>
+            <SwipperPhotos></SwipperPhotos>
+          </Center>
+        </SimpleGrid>
       </Center>
       <Center>
         <Link
           mt={"15px"}
+          mb={"35px"}
           href="https://g.page/r/CRE1zk9jDa9HEB0/review"
           target="_blank"
         >

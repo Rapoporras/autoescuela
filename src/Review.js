@@ -1,21 +1,33 @@
 import React, { useState } from "react";
 import people from "./data";
-import StarRating from "react-star-rating";
-import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
+import { MdGrade } from "react-icons/md";
 import "./Review.css";
-// Import Swiper React components
+
+import { Box, Center, Flex, Text } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 // Import Swiper styles
 import "swiper/css";
-import { Box, Center } from "@chakra-ui/react";
-import ReactStarRatingMin from "react-star-rating";
 const Review = () => {
   return (
     <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      slidesPerView={1}
+      spaceBetween={10}
+      loop={true}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+      }}
     >
       {people.map((person) => {
         return (
@@ -26,19 +38,30 @@ const Review = () => {
               color={"#fff"}
               flexDirection={"column"}
               backgroundColor={"#002327"}
+              alignItems={"center"}
+              justifyContent={"flex-start"}
               borderRadius={"1em"}
             >
-              <Box>{person.name}</Box>
-              <Box>
-                {/* <ReactStarRatingMin
-                  rating={person.star}
-                  starRatedColor="#00BAB5"
-                  // changeRating={this.changeRating}
-                  numberOfStars={5}
-                  name="rating"
-                /> */}
-              </Box>
-              <Box>{person.text}</Box>
+              <Flex
+                w={"100%"}
+                justifyContent={"space-between"}
+                alignItems={"center"}
+              >
+                <Box>{person.name}</Box>
+                <Flex justifyContent={"flex-end"} alignItems={"center"}>
+                  <Flex
+                    justifyContent={"flex-end"}
+                    alignItems={"center"}
+                    width={"100px"}
+                  >
+                    {" "}
+                    <Text fontSize="4xl">{person.star}</Text>
+                  </Flex>
+                  <MdGrade size={"30px"}></MdGrade>
+                </Flex>
+              </Flex>
+
+              <Box fontSize={"14px"}>{person.text}</Box>
             </Center>
           </SwiperSlide>
         );
