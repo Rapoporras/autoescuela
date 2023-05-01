@@ -41,7 +41,7 @@ function Home(props) {
         color="#002327"
         p="15px"
         id="inicio"
-        // position="relative"
+      // position="relative"
       >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
@@ -204,6 +204,8 @@ function Home(props) {
         <Pricing></Pricing>
       </Center>
       <Center w="100%" bg="#E9F0F6" p="15px" color="#002327"></Center>
+
+
     </>
   );
 }
