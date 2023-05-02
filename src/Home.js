@@ -29,6 +29,7 @@ import Pricing from "./Pricing";
 import "animate.css";
 import Review from "./Review";
 import SwipperPhotos from "./SwipperPhotos";
+import { FaInstagram } from "react-icons/fa";
 function Home(props) {
   // A custom scroll container
 
@@ -41,7 +42,7 @@ function Home(props) {
         color="#002327"
         p="15px"
         id="inicio"
-      // position="relative"
+        // position="relative"
       >
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
           <Center>
@@ -158,8 +159,9 @@ function Home(props) {
           <Features></Features>
         </SimpleGrid>
       </Center>
+     
       <Center p="15px" mb={"15px"}>
-        <Heading as="h2" size="2xl" style={{textAlign: "center"}}>
+        <Heading as="h2" size="2xl" style={{ textAlign: "center" }}>
           Feedback de nuestros alumnos de Autoescuela Marbella Click&Drive
         </Heading>
       </Center>
@@ -204,8 +206,6 @@ function Home(props) {
         <Pricing></Pricing>
       </Center>
       <Center w="100%" bg="#E9F0F6" p="15px" color="#002327"></Center>
-
-
     </>
   );
 }

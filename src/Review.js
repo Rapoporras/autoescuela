@@ -9,8 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 const Review = () => {
-
-
   return (
     <Swiper
       slidesPerView={1}
@@ -35,7 +33,7 @@ const Review = () => {
         return (
           <SwiperSlide>
             <Center
-              h={"250px"}
+              h={"300px"}
               p={"15px"}
               color={"#fff"}
               flexDirection={"column"}
@@ -49,7 +47,7 @@ const Review = () => {
                 justifyContent={"space-between"}
                 alignItems={"center"}
               >
-                <Box>{person.name}</Box>
+                <Box style={{ fontWeight: "bold" }}>{person.name}</Box>
                 <Flex justifyContent={"flex-end"} alignItems={"center"}>
                   <Flex
                     justifyContent={"flex-end"}
