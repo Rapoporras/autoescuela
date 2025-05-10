@@ -101,7 +101,7 @@ export default function Pricing() {
       justifyContent="center"
       alignItems="center"
     >
-      <Box w="full" pt={8} textAlign="center">
+      <Box w="full" textAlign="center">
         <Flex
           direction={{ base: "column", md: "row" }}
           justifyContent="center"
