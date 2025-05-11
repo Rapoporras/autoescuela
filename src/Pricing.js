@@ -96,12 +96,30 @@ export default function Pricing() {
   return (
     <Flex
       bg="#E9F0F6"
-      p={10}
+      p={4}
+      maxW={1200}
       w="full"
       justifyContent="center"
       alignItems="center"
     >
       <Box w="full" textAlign="center">
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justifyContent="center"
+          mb={{ base: 12, sm: 20 }}
+          h={"100px"}
+          w="full"
+          alignItems="center"
+          bg="#00BAB5"
+          marginTop={"20px"}
+          marginBottom={"30px"}
+          borderRadius="10px"
+          padding="10px"
+        >
+          <h3 style={{ color: "#002327", fontSize: "30px" }}>
+            <b>Coche con marcha manual</b>
+          </h3>
+        </Flex>
         <Flex
           direction={{ base: "column", md: "row" }}
           justifyContent="center"
@@ -135,7 +153,7 @@ export default function Pricing() {
                   fontSize="6xl"
                   textShadow="2px 0 currentcolor"
                 >
-                  50€
+                  100€
                 </chakra.span>
               </HStack>
             </VStack>
@@ -219,7 +237,7 @@ export default function Pricing() {
                   fontSize="6xl"
                   textShadow="2px 0 currentcolor"
                 >
-                  340€
+                  420€
                 </chakra.span>
                 <chakra.span alignSelf="center" fontSize="3xl" color="#002327">
                   (Recomendado)
@@ -308,7 +326,7 @@ export default function Pricing() {
                   fontSize="6xl"
                   textShadow="2px 0 currentcolor"
                 >
-                  620€
+                  730€
                 </chakra.span>
               </HStack>
             </VStack>
@@ -371,6 +389,410 @@ export default function Pricing() {
         </Flex>
         <Button
           mt="15px"
+          mx="15px"
+          backgroundColor="#002327"
+          color="#fff"
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/00g14k1Vp3cB49ydQR");
+            onOpen();
+          }}
+        >
+          Bono 10 Clases Prácticas
+        </Button>
+        <Button
+          mt="15px"
+          backgroundColor="#002327"
+          color="#fff"
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/aEU5kAdE77sRbC028h");
+            onOpen();
+          }}
+        >
+          Bono 20 Clases Prácticas
+        </Button>{" "}
+        <Button
+          mt="15px"
+          backgroundColor="#002327"
+          color="#fff"
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/eVacN29nR9AZ35u6ow");
+            onOpen();
+          }}
+        >
+          Comprar Clases Prácticas
+        </Button>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justifyContent="center"
+          mb={{ base: 12, sm: 20 }}
+          h={"100px"}
+          w="full"
+          alignItems="center"
+          bg="#00BAB5"
+          marginTop={"20px"}
+          marginBottom={"30px"}
+          borderRadius="10px"
+          padding="10px"
+        >
+          <h3 style={{ color: "#002327", fontSize: "30px" }}>
+            <b>Coche Automático</b>
+          </h3>
+        </Flex>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justifyContent="center"
+          mb={{ base: 6, sm: 0 }}
+        >
+          <Flex
+            flex={{ sm: 1, lg: "initial" }}
+            w={{ lg: 2.3 / 7 }}
+            rounded="lg"
+            borderTopRightRadius={0}
+            borderBottomLeftRadius="lg"
+            bg="#002327"
+            my={6}
+            direction="column"
+          >
+            <VStack
+              spacing={1}
+              justifyContent="center"
+              p={8}
+              textAlign="center"
+              w="full"
+              shadow="xl"
+              color="white"
+            >
+              <chakra.span fontSize="3xl" fontWeight="bold">
+                Matrícula
+              </chakra.span>
+              <HStack spacing={3}>
+                <chakra.span
+                  fontWeight="bold"
+                  fontSize="6xl"
+                  textShadow="2px 0 currentcolor"
+                >
+                  200€
+                </chakra.span>
+              </HStack>
+            </VStack>
+            <VStack
+              fontSize="sm"
+              spacing={8}
+              h="full"
+              bg="#fff"
+              borderBottomLeftRadius="lg"
+              p={12}
+            >
+              <VStack
+                spacing={4}
+                w="full"
+                direction="column"
+                alignItems="start"
+              >
+                <Feature>+ 2500 preguntas Oficiales DGT</Feature>
+                <Feature>Recomendaciones personalizadas</Feature>
+                <Feature>Soporte de profesores</Feature>
+              </VStack>
+              <Box
+                w="full"
+                ml={3}
+                display="inline-flex"
+                rounded="md"
+                shadow="md"
+              >
+                <chakra.a
+                  w="full"
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  px={5}
+                  py={3}
+                  border="solid transparent"
+                  fontWeight="bold"
+                  rounded="md"
+                  color="#fff"
+                  bg="#002327"
+                  _hover={{
+                    bg: "brand.50",
+                    _dark: { bg: "gray.700" },
+                  }}
+                  cursor="pointer"
+                  onClick={() => {
+                    setLinkstipe("https://buy.stripe.com/28ocN2gQjfZnaxWdR0");
+                    onOpen();
+                  }}
+                >
+                  Comienza ahora
+                </chakra.a>
+              </Box>
+            </VStack>
+          </Flex>
+          <Flex
+            flex={{ base: 1, lg: "initial" }}
+            w={{ lg: 2.4 / 7 }}
+            rounded="lg"
+            bg="#00BAB5"
+            _dark={{ bg: "gray.700" }}
+            mt={{ base: 4, sm: -4 }}
+            shadow="xl"
+            zIndex={30}
+            direction="column"
+          >
+            <VStack
+              spacing={1}
+              justifyContent="center"
+              p={8}
+              textAlign="center"
+              w="full"
+              shadow="xl"
+            >
+              <chakra.span fontSize="3xl" fontWeight="bold">
+                Matrícula + Bono 10 Clases Prácticas
+              </chakra.span>
+              <VStack spacing={3}>
+                <chakra.span
+                  fontWeight="bold"
+                  fontSize="6xl"
+                  textShadow="2px 0 currentcolor"
+                >
+                  560€
+                </chakra.span>
+                <chakra.span alignSelf="center" fontSize="3xl" color="#002327">
+                  (Recomendado)
+                </chakra.span>
+              </VStack>
+            </VStack>
+            <VStack
+              fontSize="sm"
+              h="full"
+              roundedBottom="lg"
+              spacing={8}
+              bg="#fff"
+              _dark={{ bg: "gray.800" }}
+              p={12}
+            >
+              <VStack
+                spacing={4}
+                w="full"
+                direction="column"
+                alignItems="start"
+              >
+                <Feature>+ 2500 preguntas Oficiales DGT</Feature>
+
+                <Feature>Recomendaciones personalizadas</Feature>
+                <Feature>Clases Prácticas de 45 min</Feature>
+                <Feature>Prácticas en zona de examen</Feature>
+                <Feature>Contacto directo con tu profesor/a</Feature>
+                <FeatureBad>No incluye Tasas DGT ni examen Practico</FeatureBad>
+              </VStack>
+              <Box display="inline-flex" rounded="md" shadow="md" w="full">
+                <chakra.a
+                  w="full"
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  px={5}
+                  py={3}
+                  border="solid transparent"
+                  fontWeight="bold"
+                  rounded="md"
+                  _light={{ color: "white" }}
+                  bg="#00BAB5"
+                  _dark={{ bg: "brand.500" }}
+                  _hover={{
+                    bg: "brand.700",
+                    _dark: { bg: "brand.600" },
+                  }}
+                  cursor="pointer"
+                  onClick={() => {
+                    setLinkstipe("https://buy.stripe.com/6oE28obvZ7sRfSg5kw");
+                    onOpen();
+                  }}
+                >
+                  Comienza ahora
+                </chakra.a>
+              </Box>
+            </VStack>
+          </Flex>
+
+          {/* <Flex
+            flex={{ sm: 1, lg: "initial" }}
+            w={{ lg: 2.3 / 7 }}
+            roundedTop="lg"
+            borderBottomRightRadius="lg"
+            borderTopLeftRadius={0}
+            bg="#002327"
+            _dark={{ bg: "gray.700" }}
+            my={6}
+            direction="column"
+          >
+            <VStack
+              spacing={1}
+              justifyContent="center"
+              p={8}
+              textAlign="center"
+              w="full"
+              shadow="xl"
+              color="white"
+            >
+              <chakra.span fontSize="3xl" fontWeight="bold">
+                Matrícula + Bono 20 Clases Prácticas
+              </chakra.span>
+              <HStack spacing={3}>
+                <chakra.span
+                  fontWeight="bold"
+                  fontSize="6xl"
+                  textShadow="2px 0 currentcolor"
+                >
+                  620€
+                </chakra.span>
+              </HStack>
+            </VStack>
+            <VStack
+              fontSize="sm"
+              spacing={8}
+              h="full"
+              bg="#fff"
+              _dark={{ bg: "gray.800" }}
+              borderBottomRightRadius="lg"
+              p={12}
+            >
+              <VStack
+                spacing={4}
+                w="full"
+                direction="column"
+                alignItems="start"
+              >
+                <Feature>+ 2500 preguntas Oficiales DGT</Feature>
+                <Feature>Recomendaciones personalizadas</Feature>
+                <Feature>Clases Prácticas de 45 min</Feature>
+                <Feature>Prácticas en zona de examen</Feature>
+                <Feature>Contacto directo con tu profesor/a</Feature>
+                <FeatureBad>No incluye Tasas DGT ni examen Practico</FeatureBad>
+              </VStack>
+              <Box
+                w="full"
+                ml={3}
+                display="inline-flex"
+                rounded="md"
+                shadow="md"
+              >
+                <chakra.a
+                  w="full"
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  px={5}
+                  py={3}
+                  border="solid transparent"
+                  fontWeight="bold"
+                  rounded="md"
+                  color="#fff"
+                  bg="#002327"
+                  _hover={{
+                    bg: "brand.50",
+                    _dark: { bg: "gray.700" },
+                  }}
+                  cursor="pointer"
+                  onClick={() => {
+                    setLinkstipe("https://buy.stripe.com/bIYcN243x6oN9tSdQU");
+                    onOpen();
+                  }}
+                >
+                  Comienza ahora
+                </chakra.a>
+              </Box>
+            </VStack>
+          </Flex> */}
+        </Flex>
+        <Button
+          mt="15px"
+          mx="15px"
+          backgroundColor="#002327"
+          color="#fff"
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/28o7sI8jN3cBfSg9AL");
+            onOpen();
+          }}
+        >
+          Bono 10 Clases Prácticas
+        </Button>
+        
+        <Button
+          mt="15px"
+          backgroundColor="#002327"
+          color="#fff"
+          _hover={{
+            bg: "#fff",
+            border: "1px solid #002327",
+            color: "#00BAB5",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+          onClick={() => {
+            setLinkstipe("https://buy.stripe.com/14kcN22ZtcNb8pOfZb");
+            onOpen();
+          }}
+        >
+          Comprar Clases Prácticas
+        </Button>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justifyContent="center"
+          mb={{ base: 12, sm: 20 }}
+          h={"100px"}
+          w="full"
+          alignItems="center"
+          bg="#00BAB5"
+          marginTop={"20px"}
+          marginBottom={"30px"}
+          borderRadius="10px"
+          padding="10px"
+        >
+          <h3 style={{ color: "#002327", fontSize: "30px" }}>
+            <b>Otros</b>
+          </h3>
+        </Flex>
+        <Button
+          mt="15px"
           backgroundColor="#002327"
           color="#fff"
           _hover={{
@@ -429,67 +851,6 @@ export default function Pricing() {
           }}
         >
           Pagar Examen + Tasas DGT
-        </Button>
-        <Button
-          mt="15px"
-          mx="15px"
-          backgroundColor="#002327"
-          color="#fff"
-          _hover={{
-            bg: "#fff",
-            border: "1px solid #002327",
-            color: "#00BAB5",
-          }}
-          _focus={{
-            boxShadow:
-              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-          }}
-          onClick={() => {
-            setLinkstipe("https://buy.stripe.com/00g14k1Vp3cB49ydQR");
-            onOpen();
-          }}
-        >
-          Bono 10 Clases Prácticas
-        </Button>
-        <Button
-          mt="15px"
-          backgroundColor="#002327"
-          color="#fff"
-          _hover={{
-            bg: "#fff",
-            border: "1px solid #002327",
-            color: "#00BAB5",
-          }}
-          _focus={{
-            boxShadow:
-              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-          }}
-          onClick={() => {
-            setLinkstipe("https://buy.stripe.com/3cs8wM1VpfZndK8cMT");
-            onOpen();
-          }}
-        >
-          Bono 20 Clases Prácticas
-        </Button>{" "}
-        <Button
-          mt="15px"
-          backgroundColor="#002327"
-          color="#fff"
-          _hover={{
-            bg: "#fff",
-            border: "1px solid #002327",
-            color: "#00BAB5",
-          }}
-          _focus={{
-            boxShadow:
-              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-          }}
-          onClick={() => {
-            setLinkstipe("https://buy.stripe.com/eVacN29nR9AZ35u6ow");
-            onOpen();
-          }}
-        >
-          Comprar Clases Prácticas
         </Button>
         <Modal
           isOpen={isOpen}

@@ -4,7 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { MdAlternateEmail, MdPermPhoneMsg } from "react-icons/md";
 export default function App() {
   const scrollTo = (id) => {
@@ -99,6 +99,37 @@ export default function App() {
                   color="gray.600"
                 >
                   Siguenos en instagram
+                </chakra.p>
+              </Flex>
+
+            </chakra.a></Flex>
+              <Flex>  <chakra.a
+              href="https://www.tiktok.com/@autoescuelaclickanddrive?_t=8qP7KvSVMZd&_r=1"
+              target="_blank"
+              mx="2"
+              color="gray.600"
+              _dark={{
+                color: "gray.300",
+                _hover: {
+                  color: "gray.400",
+                },
+              }}
+              _hover={{
+                color: "gray.500",
+              }}
+              aria-label="Github"
+            >    <Flex mx="-2" flexDirection={"row"} alignItems={"center"} gap={"15px"}>
+                <FaTiktok size={"32px"}></FaTiktok>
+                <chakra.p
+                  py={{
+                    base: "2",
+                    sm: "0",
+                  }}
+                  fontSize="xl"
+                  fontWeight="bold"
+                  color="gray.600"
+                >
+                  Siguenos en TikTok
                 </chakra.p>
               </Flex>
 
